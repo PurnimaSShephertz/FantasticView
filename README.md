@@ -11,7 +11,7 @@ When push notification have media content than its a higher chance to increase t
 #### Configure your app for Rich Push Notification and add a Notification Service Extension target to your app
 
 Go to your project target and click on Capabilities and ensure that ‘Push Notifications’ is enabled and that ‘Remote notifications’ is selected under Background Modes:
-
+[![Build Status](https://jenkins.owncloud.org/buildStatus/icon?job=owncloud-core/core/master)](https://jenkins.owncloud.org/job/owncloud-core/job/core/job/master/)
 ![alt tag](https://apiindiablob.blob.core.windows.net/184-d9086e02f8ee9d46b719e18/Capabilities.png)
 ![Capabilities](https://apiindiablob.blob.core.windows.net/184-d9086e02f8ee9d46b719e18/Capabilities.png)
 ![Enable Push Notifications](https://apiindiablob.blob.core.windows.net/184-d9086e02f8ee9d46b719e18/Enable%20Remote%20Notification.png)
