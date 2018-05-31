@@ -11,8 +11,8 @@ When push notification have media content than its a higher chance to increase t
 #### Configure your app for Rich Push Notification and add a Notification Service Extension target to your app
 
 Go to your project target and click on Capabilities and ensure that ‘Push Notifications’ is enabled and that ‘Remote notifications’ is selected under Background Modes:
-![Capabilities](images/enableRemoteNoti.png)
-![EnablePushNotifications](https://apiindiablob.blob.core.windows.net/184-d9086e02f8ee9d46b719e18/Enable%20Remote%20Notification.png)
+![Capabilities](images/Capabilities.png)
+![EnablePushNotifications](images/enableRemoteNoti.png)
 
 Go to AppDelegate.swift and import UserNotification.framework in appdelegate and add this code in didFinishLaunchingWithOptions:
 
