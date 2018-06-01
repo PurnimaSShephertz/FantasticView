@@ -1,7 +1,5 @@
 # SHNotificationContent
 
-[![Platform](https://img.shields.io/cocoapods/p/CTNotificationContent.svg?style=flat)](platform ios)
-
 ### A Notification Content Extension class to display custom content interfaces for iOS 10 push notifications
 
 Apple introduces push notification feature in iOS 10 and guess what these are more richer and interactional. Now we can view photos, gifs, watch videos, and listen to the audio from inside a notification without open that app.
