@@ -42,3 +42,6 @@ Replace NotificationService.h & NotificationService.m class with these classes a
 ### Configure your app for Rich Push Notification and add a Notification Content Extension target to your app
 
 Create a Notification Content Service Extension in your project. To do that, in Xcode, select File -> New -> Target and choose the Notification Content Service Extension template.
+
+test
+
