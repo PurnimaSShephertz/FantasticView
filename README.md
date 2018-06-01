@@ -37,13 +37,9 @@ Create a Notification Service Extension in your project. To do that, in Xcode, s
 Once you’ve added the new target, you’ll have a new file called NotificationService.swift.Note: Notification Service Extension has a separate Apple App ID and Provisioning profile!
 #### Note that notification extension has its own Bundle Id (ex: com.shephertz.demo.NotificationService) as well as its own Apple App ID and Provisioning profile which must be set up in Apple Developer Portal separately.
 
-Open this class, and write this code in did Receive(: with Content Handler:) delegate method to serve any media in the notification.The code in this method looks like this:
+Replace NotificationService.h & NotificationService.m class with these classes and ad SHNotification libSHNotificationContent.a, include folder & iCarousel folder.
 
 
 
 
-```
-
-```
-
-#### Configure your app for Rich Push Notification and add a Notification Content Extension target to your app
+### Configure your app for Rich Push Notification and add a Notification Content Extension target to your app
