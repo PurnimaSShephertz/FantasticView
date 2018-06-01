@@ -20,10 +20,10 @@ Go to AppDelegate.swift and import UserNotification.framework in appdelegate and
 NUserNotificationCenter.current().delegate = self
 
 UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge]) {(granted, error) in
-// actions based on whether notifications were authorized or not
-if (granted) {
-UIApplication.shared.registerForRemoteNotifications()
-}
+    // actions based on whether notifications were authorized or not
+    if (granted) {
+        UIApplication.shared.registerForRemoteNotifications()
+    }
 }
 ```
 You can enable Rich Push Notification via [Notification Service Extension](https://developer.apple.com/documentation/usernotifications/unnotificationserviceextension):
@@ -39,5 +39,6 @@ Replace NotificationService.h & NotificationService.m class with these classes a
 
 
 
-
 ### Configure your app for Rich Push Notification and add a Notification Content Extension target to your app
+
+Create a Notification Content Service Extension in your project. To do that, in Xcode, select File -> New -> Target and choose the Notification Content Service Extension template.
