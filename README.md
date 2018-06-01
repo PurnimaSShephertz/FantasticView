@@ -17,14 +17,20 @@ Go to your project target and click on Capabilities and ensure that ‘Push Noti
 Go to AppDelegate.swift and import UserNotification.framework in appdelegate and add this code in didFinishLaunchingWithOptions:
 
 ```
-NUserNotificationCenter.current().delegate = self
-
-UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge]) {(granted, error) in
-    // actions based on whether notifications were authorized or not
-    if (granted) {
-        UIApplication.shared.registerForRemoteNotifications()
-    }
-}
+UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        center.delegate = self;
+        [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge)
+         
+                              completionHandler:^(BOOL granted, NSError * _Nullable error){
+                                  if(!error){
+                                      dispatch_async(dispatch_get_main_queue(), ^{
+                                          // UI UPDATE 1
+                                          [[UIApplication sharedApplication] registerForRemoteNotifications];
+                                      });
+                                  }
+                              }
+         ];
 ```
 You can enable Rich Push Notification via [Notification Service Extension](https://developer.apple.com/documentation/usernotifications/unnotificationserviceextension):
 
@@ -35,7 +41,7 @@ Create a Notification Service Extension in your project. To do that, in Xcode, s
 Once you’ve added the new target, you’ll have a new file called NotificationService.swift.Note: Notification Service Extension has a separate Apple App ID and Provisioning profile!
 #### Note that notification extension has its own Bundle Id (ex: com.shephertz.demo.NotificationService) as well as its own Apple App ID and Provisioning profile which must be set up in Apple Developer Portal separately.
 
-Replace NotificationService.h & NotificationService.m class with these classes and ad SHNotification libSHNotificationContent.a, include folder & iCarousel folder.
+Replace NotificationService.h & NotificationService.m class with these classes and add SHNotification libSHNotificationContent.a, include folder & iCarousel folder.
 
 
 
@@ -44,5 +50,9 @@ Replace NotificationService.h & NotificationService.m class with these classes a
 Create a Notification Content Service Extension in your project. To do that, in Xcode, select File -> New -> Target and choose the Notification Content Service Extension template.
 
 ![Notification Content Service](images/notificationContentService.png)
+
+Once you’ve added the new target, you’ll have a new file called NotificationViewController.h, NotificationViewController.m & MainInterface.storyboard.Note: Notification Content Service Extension has a separate Apple App ID and Provisioning profile!
+
+Replace NotificationViewController.h, NotificationViewController.m & MainInterface.storyboard class with these classes and add SHNotification libSHNotificationContent.a, include folder & iCarousel folder.
 
 
