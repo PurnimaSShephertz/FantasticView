@@ -43,5 +43,6 @@ Replace NotificationService.h & NotificationService.m class with these classes a
 
 Create a Notification Content Service Extension in your project. To do that, in Xcode, select File -> New -> Target and choose the Notification Content Service Extension template.
 
-test
+![Nitification Content Service](images/NCS.png)
+
 
