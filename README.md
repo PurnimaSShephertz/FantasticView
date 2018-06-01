@@ -1,6 +1,6 @@
 # SHNotificationContent
 
-[![Platform](https://img.shields.io/cocoapods/p/CTNotificationContent.svg?style=flat)]
+[![Platform](https://img.shields.io/cocoapods/p/CTNotificationContent.svg?style=flat)](platform ios)
 
 ### A Notification Content Extension class to display custom content interfaces for iOS 10 push notifications
 
